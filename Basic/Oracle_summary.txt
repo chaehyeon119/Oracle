@@ -1,0 +1,138 @@
+#Oracle01_01_Basic01_김채현.txt
+
+
+DRMS: Oracle
+	실행 01
+	  sqlplus 계정
+	  pwd
+	실행 02
+	  sqlplus 계정/pwd
+
+빠져나온다 : exit
+
+접속계정 확인: show user
+*관리자 계정: sys, system
+*테이블: tab
+	- user table
+	- 관리용
+
+sqlplus 계정/pwd
+
+-------------------------------------
+cl scr
+show user
+show pagesize
+show linesize
+**접속상태에서 계정변경
+ conn 계정
+ pwd
+ conn 계정/ora11
+
+conn /as sysdba
+
+## 계정 사용
+conn 계정/pwd
+
+1.oracle 설치 확인(실행) 방법
+  1)sqlpus system(계정)
+     pwd
+  2)sqlplus system(계정)/pwd
+
+2. 빠져나오기 : exit(할 일 끝나면 꼭 해야함!!)
+3. 접속계정 확인: show user
+4. 관리자 계정 : sys(최상위 관리자), system
+5. 테이블: user table, 관리용(미리 만들어둔)->tab
+6. cl scr : 작업내용 깨끗하게 지우기
+7.show pagesize/linesize
+8. 접속상태에서 계정 변경
+  1)conn 계정
+     pwd
+  2)conn 계정/ora11
+9. sys계정 접속 방법 : conn /as sysdba
+10. oracle의 주석은 —임.
+11. spool 파일경로\파일명.확장자 : spool off 전까지 작업한 내용을 파일에 저장
+
+
+6/3
+
+#SQL문장 종류
+1) DQL: Data Query Language(질의어)
+-SELECT(검색)
+
+2)DML: Data Manipulation Language(데이터 조작어)
+- INSERT, UPDATE, DELETE
+-레코드 조작
+
+3)DDL: Data Definition Language(데이터 정의어)
+- CREATE, ALTER, DROP, RENAME
+- 객체 조작
+
+4) TCL: Transaction Control Language(트랜잭션 처리어)
+- COMMIT, ROLLBACK, SAVEPOINT
+
+5) DCL: Data Control Language(데이터 제어어)
+- GRANT, REVOKE
+
+레코드 (컬럼에 해당하는 자료들)
+객체 : DB, Table, user(계정) 등등 
+
+
+
+
+desc 어쩌구 -> 테이블의 열들을 확인하는 것
+
+사용 가능한 계정 확인
+
+select EMPLOYEE_ID as "사번" ,FIRST_NAME as "이름", LAST_NAME as "성" from employees;
+select EMPLOYEE_ID as 사번,FIRST_NAME as 이름, LAST_NAME as 성 from employees;
+select EMPLOYEE_ID 사번,FIRST_NAME 이름, LAST_NAME 성 from employees;
+
+
+구조를 알고 싶을 때는 desc
+테이블 전체를 알고 싶을 때는 select
+
+
+
+[ 컬럼 추가 ]
+alter table [테이블명] add [컬럼명][타입][옵션];
+ex.) alter table memberT01 add mem_pay varchar2(15) not null default '0';
+
+[ 컬럼 삭제 ]
+alter table [테이블명] drop [컬럼명];
+ex.) alter table memberT01 drop mem_id;
+
+[컬럼명 변경 및 타입 변경 ]
+alter table [테이블명] change [컬럼명] [변경할컬럼명] varchar(12);
+ex.) ALTER TABLE memberT01 CHANGE mem_addr mem_address VARCHAR2(30);
+
+[ 컬럼 타입 수정 ]
+alter table [테이블명] modify [컬럼명] varchar(14);
+ex.) alter table memberT01 modify mem_addr VARCHAR2(30);
+
+[ 테이블명 수정 ]
+alter table [테이블명] rename [변경할테이블명];
+ex.) alter table memberT01 rename memberS01;
+
+[ 테이블 삭제 ]
+drop table [테이블명]
+
+
+delete from membert01;
+membert01이 삭제되는게 아니라 그 안에 있는 레코드가 삭제됨
+
+수정하려면 ed 엔터
+재실행
+1. /
+2. run
+
+#실행파일 *.sql
+#start 경로(sql 파일 경로)
+
+start 내 경로
+
+
+delete from prac.hongik01
+where std_name in ('최영현', '정지석');
+
+
+constraints 제약조건: 정확성 신뢰성 보장

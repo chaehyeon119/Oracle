@@ -1,0 +1,18 @@
+#Oracle01_22_TableMemberT01_김채현.txt
+SQL> start C:\WSHongIk2021\0603\TableMember.sql
+
+Table dropped.
+
+
+Table created.
+
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+MEMBERT01                                                    TABLE
+
+SQL>
+
+
+
+

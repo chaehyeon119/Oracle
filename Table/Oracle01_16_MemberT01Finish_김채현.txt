@@ -1,0 +1,35 @@
+#Oracle01_16_MemberT01Finish_김채현.txt
+
+SQL> show user
+USER is "SYSTEM"
+SQL> conn scott/happyday;
+Connected.
+SQL> create table memberT01(
+  2  mem_name VARCHAR(20),
+  3  mem_id VARCHAR(20),
+  4  mem_pwd VARCHAR2(20),
+  5  mem_email VARCHAR2(20),
+  6  mem_phone VARCHAR2(20),
+  7  mem_addr VARCHAR2(20)
+  8  );
+
+Table created.
+
+SQL> desc memberT01;
+ Name
+                           Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MEM_NAME
+                                    VARCHAR2(20)
+ MEM_ID
+                                    VARCHAR2(20)
+ MEM_PWD
+                                    VARCHAR2(20)
+ MEM_EMAIL
+                                    VARCHAR2(20)
+ MEM_PHONE
+                                    VARCHAR2(20)
+ MEM_ADDR
+                                    VARCHAR2(20)
+
+SQL>

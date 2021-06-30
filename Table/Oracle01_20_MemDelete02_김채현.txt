@@ -1,0 +1,53 @@
+#Oracle01_20_MemDelete02_김채현.txt
+
+SQL> delete from memberT01
+  2  where mem_id ='orange';
+
+0 rows deleted.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  delete from memberT01
+  2* where mem_id ='Orange'
+SQL> /
+
+0 rows deleted.
+
+SQL> run
+  1  delete from memberT01
+  2* where mem_id ='Orange'
+
+0 rows deleted.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  delete from memberT01
+  2* where mem_id ='Orange1'
+SQL> /
+
+1 row deleted.
+
+SQL> run
+  1  delete from memberT01
+  2* where mem_id ='Orange1'
+
+0 rows deleted.
+
+SQL> select * from memberT01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                                  MEM_EMAIL
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------
+MEM_PHONE                                MEM_ADDR
+---------------------------------------- ----------------------------------------
+오렌지                                   Orange2                                  1234                                     Orange@test.com
+044                                      홍익대학교
+
+오렌지                                   Orange3                                  1234                                     Orange@test.com
+044                                      홍익대학교
+
+
+
+
+

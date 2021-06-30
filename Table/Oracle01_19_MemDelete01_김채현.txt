@@ -1,0 +1,8 @@
+#Oracle01_19_MemDelete01_김채현.txt
+
+
+SQL> delete from membert01;
+
+2 rows deleted.
+
+SQL>

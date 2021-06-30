@@ -1,0 +1,25 @@
+#Oracle01_18_memberInsert02_김채현.txt
+
+
+SQL> insert into memberT01
+  2  values('오렌지','Orange','1234','Orange@test.com','044','홍익대학교');
+
+1 row created.
+
+SQL> selec*from membert01;
+SP2-0734: unknown command beginning "selec*from..." - rest of line ignored.
+SQL> select * from membert01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                                   MEM_EMAIL
+---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------
+MEM_PHONE                                MEM_ADDR
+---------------------------------------- ----------------------------------------
+오렌지                                   Orange                                   1234
+
+
+오렌지                                   Orange                                   1234
+                                   Orange@test.com
+044                                      홍익대학교
+
+
+SQL>

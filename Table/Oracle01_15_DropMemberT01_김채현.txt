@@ -1,0 +1,12 @@
+#Oracle01_15_DropMemberT01_김채현.txt
+
+
+SQL> drop table membert01;
+
+Table dropped.
+
+SQL> select * from tab;
+
+no rows selected
+
+SQL>

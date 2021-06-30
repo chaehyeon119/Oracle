@@ -1,0 +1,30 @@
+#Oracle01_01_Basic01_김채현.txt
+
+DRMS: Oracle
+	실행 01
+	  sqlplus 계정
+	  pwd
+	실행 02
+	  sqlplus 계정/pwd
+
+빠져나온다 : exit
+
+접속계정 확인: show user
+*관리자 계정: sys, system
+*테이블: tab
+	- user table
+	- 관리용
+
+sqlplus 계정/pwd
+
+-------------------------------------
+cl scr
+show user
+show pagesize
+show linesize
+**접속상태에서 계정변경
+ conn 계정
+ pwd
+ conn 계정/ora11
+
+conn /as sysdba
