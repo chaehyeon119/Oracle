@@ -1,0 +1,45 @@
+SQL> select abs(-10) from dual;
+
+  ABS(-10)
+----------
+        10
+
+
+SQL> select ceil(-3.7) from dual;
+
+CEIL(-3.7)
+----------
+        -3
+
+SQL> select ceil(-3.3) from dual;
+
+CEIL(-3.3)
+----------
+        -3
+
+SQL> select floor(3.7) from dual
+  2  ;
+
+FLOOR(3.7)
+----------
+         3
+
+SQL> select floor(3.3) from dual;
+
+FLOOR(3.3)
+----------
+         3
+
+
+
+SQL> select round(3.7) from dual;
+
+ROUND(3.7)
+----------
+         4
+
+SQL> select round(3.3) from dual;
+
+ROUND(3.3)
+----------
+         3

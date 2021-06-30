@@ -1,0 +1,37 @@
+SQL> create table sawontable(
+  2  sabun number(3),
+  3  saname VARCHAR2(10),
+  4  deptno number(3),
+  5  sajob varchar2(10),
+  6  sapay number(10),
+  7  sahire date,
+  8  sasex varchar2(6),
+  9  samgr number(3),
+ 10  constraint sawontable_sasex_ck check(sasex in('남자','여자')
+ 11  ));
+
+Table created.
+
+SQL> select owner, constraint_name, table_name from use_constraints;
+select owner, constraint_name, table_name from use_constraints
+                                               *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> insert into sawonTable values('2', '한국남', '20', '부장', '3000', '1988/11/01', '남자', '1');
+
+1 row created.
+
+SQL> insert into sawonTable values('3', '이순신', '20', '과장', '3500', '1985/03/01', '남자', '2');
+
+1 row created.
+
+SQL> insert into sawonTable values('5', '이순라', '20', '사원', '1200', '1990/05/01', '중성', '3');
+insert into sawonTable values('5', '이순라', '20', '사원', '1200', '1990/05/01', '중성', '3')
+*
+ERROR at line 1:
+ORA-02290: check constraint (SCOTT.SAWONTABLE_SASEX_CK) violated
+
+
+SQL>

@@ -1,0 +1,94 @@
+#constraint sawon_deptno_fk foreign key(deptno) references dept(deptno)
+ on delete cascade
+
+### on delete cascade의 모체를 지우면 자식도 다 지워짐 
+
+
+
+SQL> create table sawon(
+  2  sabun number(3),
+  3  saname varchar2(10),
+  4  deptno number(3),
+  5  sajob varchar2(10),
+  6  sapay number(10),
+  7  sahire date DEFAULT sysdate,
+  8  sasex varchar2(6),
+  9  samgr number(3),
+ 10  constraint sawon_sabun_pk primary key (sabun),
+ 11  constraint sawon_deptno_fk foreign key(deptno) references dept(deptno)
+ 12  on delete cascade,
+ 13  constraint sawon_saname_nn check(saname is not null),
+ 14  constraint sawon_sasex_ck check(sasex in('남자','여자')),
+ 15  constraint sawon_samgr_fk foreign key(samgr) references sawon(sabun)
+ 16  );
+
+Table created.
+
+SQL> create table gogek(
+  2  gobun number(3),
+  3  goname varchar2(10),
+  4  gotel varchar2(20),
+  5  gojumin varchar2(14),
+  6  godam number(3),
+  7  CONSTRAINT gogek_godam_fk FOREIGN KEY(godam) REFERENCES sawon(sabun),
+  8  constraint gogek_gobun_pk primary key (gobun)
+  9  );
+
+Table created.
+
+SQL> insert into sawon values('1', '홍길동', '10', '회장', '5000', '1980/01/01', '남자', null);
+insert into sawon values('1', '홍길동', '10', '회장', '5000', '1980/01/01', '남자', null)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SCOTT.SAWON_DEPTNO_FK) violated - parent key not found
+
+
+SQL> insert into sawon values('2', '한국남', '20', '부장', '3000', '1988/11/01', '남자', '1');
+insert into sawon values('2', '한국남', '20', '부장', '3000', '1988/11/01', '남자', '1')
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SCOTT.SAWON_DEPTNO_FK) violated - parent key not found
+
+
+SQL> insert into dept values ('10', '총무부','서울');
+
+1 row created.
+
+SQL> insert into dept values('20', '영업부' ,'대전');
+
+1 row created.
+
+SQL> insert into sawon values('1', '홍길동', '10', '회장', '5000', '1980/01/01', '남자', null);
+
+1 row created.
+
+SQL> insert into sawon values('2', '한국남', '20', '부장', '3000', '1988/11/01', '남자', '1');
+
+1 row created.
+
+SQL> delete dept
+  2  where deptno=10;
+delete dept
+*
+ERROR at line 1:
+ORA-02292: integrity constraint (SCOTT.SAWON_SAMGR_FK) violated - child record found
+
+
+SQL> delete dept
+  2  where deptno =20;
+
+1 row deleted.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                LOC
+---------- -------------------- --------------------
+        10 총무부               서울
+
+SQL> select * from sawon;
+
+     SABUN SANAME                   DEPTNO SAJOB                     SAPAY SAHIRE   SASEX             SAMGR
+---------- -------------------- ---------- -------------------- ---------- -------- ------------ ----------
+         1 홍길동                       10 회장                       5000 80/01/01 남자
+
+SQL>

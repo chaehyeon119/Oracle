@@ -1,0 +1,19 @@
+SQL> select SUBSTR('Happyday', 3,3) from dual;
+
+SUBSTR
+------
+ppy
+
+SQL> select INSTR('Happyday', 'ppy') from dual;
+
+INSTR('HAPPYDAY','PPY')
+-----------------------
+                      3
+
+SQL> select REPLACE('Happyday', 'ppy', 'qqy') from dual;
+
+REPLACE('HAPPYDA
+----------------
+Haqqyday
+
+SQL>

@@ -1,0 +1,30 @@
+SQL> select sysdate from dual;
+
+SYSDATE
+--------
+21/06/08
+
+SQL> create table sawontable(
+  2  sabun number(3),
+  3  saname VARCHAR2(10),
+  4  deptno number(3),
+  5  sajob varchar2(10),
+  6  sapay number(10),
+  7  sahire date DEFAULT sysdate,
+  8  sasex varchar2(6),
+  9  samgr number(3)
+ 10  );
+
+Table created.
+
+SQL> insert into sawonTable (sabun, saname) values('2', '한국남');
+
+1 row created.
+
+SQL> select * from sawonTable;
+
+     SABUN SANAME                   DEPTNO SAJOB                     SAPAY SAHIRE   SASEX             SAMGR
+---------- -------------------- ---------- -------------------- ---------- -------- ------------ ----------
+         2 한국남                                                          21/06/08
+
+SQL>

@@ -1,0 +1,48 @@
+C:\Users\rentalhub-lg1>cd\
+
+C:\>cd windows
+
+C:\Windows>dir sys*
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 7E05-746E
+
+ C:\Windows 디렉터리
+
+2020-11-14  오전 09:02    <DIR>          System
+2019-03-19  오후 01:49               219 system.ini
+2021-06-03  오전 10:42    <DIR>          System32
+2020-11-14  오전 09:02    <DIR>          SystemApps
+2021-03-26  오전 11:07    <DIR>          SystemResources
+2021-06-01  오후 10:50    <DIR>          SysWOW64
+               1개 파일                 219 바이트
+               5개 디렉터리  131,632,668,672 바이트 남음
+
+C:\Windows>dir ?e*
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 7E05-746E
+
+ C:\Windows 디렉터리
+
+2019-10-17  오후 04:09    <DIR>          debug
+2020-11-14  오전 09:04    <DIR>          Help
+2021-02-03  오후 01:43         1,060,352 HelpPane.exe
+2020-11-14  오전 09:02    <DIR>          Performance
+2021-02-03  오후 01:43           358,400 regedit.exe
+2020-11-14  오전 09:02    <DIR>          Registration
+2020-11-14  오전 09:02    <DIR>          RemotePackages
+2020-11-14  오전 09:02    <DIR>          rescache
+2021-05-29  오전 09:02    <DIR>          Resources
+2020-11-14  오전 09:02    <DIR>          security
+2020-11-13  오후 04:13    <DIR>          ServiceProfiles
+2019-10-17  오후 04:40    <DIR>          ServiceState
+2020-11-13  오후 05:27    <DIR>          servicing
+2020-11-14  오전 09:05    <DIR>          Setup
+2021-06-04  오후 03:29            21,833 setupact.log
+2020-11-13  오후 04:14                 0 setuperr.log
+2021-06-08  오후 05:47    <DIR>          Temp
+2020-11-14  오전 09:02    <DIR>          TextInput
+2020-11-14  오전 09:02    <DIR>          Web
+               4개 파일           1,440,585 바이트
+              15개 디렉터리  131,632,427,008 바이트 남음
+
+C:\Windows>

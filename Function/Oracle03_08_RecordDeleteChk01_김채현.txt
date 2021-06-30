@@ -1,0 +1,37 @@
+Table created.
+
+SQL> insert into dept values ('10', '총무부','서울');
+
+1 row created.
+
+SQL> insert into dept values('20', '영업부' ,'대전');
+
+1 row created.
+
+SQL> insert into sawon values('1', '홍길동', '10', '회장', '5000', '1980/01/01', '남자', null);
+
+1 row created.
+
+SQL> insert into sawon values('2', '한국남', '20', '부장', '3000', '1988/11/01', '남자', '1');
+
+1 row created.
+
+SQL> delete from sawon
+  2  where deptno=10;
+delete from sawon
+*
+ERROR at line 1:
+ORA-02292: integrity constraint (SCOTT.SAWON_SAMGR_FK) violated - child record found
+
+
+SQL> delete from sawon
+  2  where deptno=20;
+
+1 row deleted.
+
+SQL> delete from sawon
+  2  where deptno=10;
+
+1 row deleted.
+
+SQL>
