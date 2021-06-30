@@ -1,0 +1,46 @@
+#Oracle02_11_notNullConstraintsChk_김채현.txt
+#####모르겠음
+
+
+SQL> create table dept(
+  2  deptno number(3), not null,
+  3  dname VARCHAR2(10),
+  4  loc VARCHAR2(20));
+deptno number(3), not null,
+                  *
+ERROR at line 2:
+ORA-00904: : invalid identifier
+
+
+SQL> select * from tab;
+
+TNAME                                                        TABTYPE
+------------------------------------------------------------ --------------
+ CLUSTERID
+----------
+DEPT                                                         TABLE
+
+
+DEPTTABLE                                                    TABLE
+
+
+GOGEKTABLE                                                   TABLE
+
+
+
+TNAME                                                        TABTYPE
+------------------------------------------------------------ --------------
+ CLUSTERID
+----------
+MEMBERT01                                                    TABLE
+
+
+SAWONTABLE                                                   TABLE
+
+
+
+SQL> select *from dept;
+
+no rows selected
+
+SQL>

@@ -1,0 +1,18 @@
+SQL> insert into dept(dname,loc) values('총무부','서울');
+
+1 row created.
+
+SQL> select *form dept;
+select *form dept
+        *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select *from dept;
+
+    DEPTNO DNAME                LOC
+---------- -------------------- ----------------------------------------
+           총무부               서울
+
+SQL>

@@ -1,0 +1,20 @@
+#Oracle02_03_dual_김채현
+
+SQL> select 10+3 from memberT01;
+
+      10+3
+----------
+        13
+        13
+        13
+        13
+        13
+
+SQL> select 10+3 from dual;
+
+      10+3
+----------
+        13
+
+SQL>
+

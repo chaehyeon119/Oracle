@@ -1,0 +1,13 @@
+
+SQL> create table dept(
+  2  deptno number(3) constraint dept_deptno_uq unique,
+  3  dname varchar2(10),
+  4  loc varchar2(20));
+
+Table created.
+
+SQL> select * from dept;
+
+no rows selected
+
+SQL>

@@ -1,0 +1,82 @@
+#Oracle02_05_AlterTable01_김채현.txt
+연습 01] memberT01  테이블에 mem_notice varchar2(30)  1개 Column 추가 
+	select * from memberT01;
+	DESC memberT01;
+
+연습 02] memberT01  테이블에 mem_notice varchar2(20)  1개 Column 수정
+	select * from memberT01;
+	DESC memberT01;
+
+연습 03] memberT01  테이블에 mem_notice varchar2(20)  1개 Column 삭제
+	select * from memberT01;
+	DESC memberT01;
+
+연습 04] memberT01  테이블에 mem_addr 을 mem_address  로 변경
+	select * from memberT01;
+	DESC memberT01;
+
+
+SQL> select * from memberT01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                             MEM_EMAIL                                MEM_PHONE                                MEM_ADDR
+---------------------------------------- ---------------------------------------- ---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------
+오렌지                                   orange                                   4321                                orange@test.com                          032                                      재능대학교
+장미                                     red                                      1234                                red@test.com                             044                                      홍익대학교
+개나리                                   yellow                                   1234                                yellow@test.com                          032                                      재능대학교
+소나무                                   green                                    1234                                green@test.com                           044                                      홍익대학교
+바다                                     blue                                     1234                                blue@test.com                            044                                      홍익대학교
+
+SQL> alter table membert01
+  2  add mem_notice varchar2(30);
+
+Table altered.
+
+SQL> alter table membert01
+  2  modify mem_notice varchar2(20);
+
+Table altered.
+
+SQL> desc memberT01;
+ Name                                                                                                                                                                     Null?    Type
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------- --------------------------------------------------------------------------------------------------------------------
+ MEM_NAME                                                                                                                                                                          VARCHAR2(20)
+ MEM_ID                                                                                                                                                                            VARCHAR2(20)
+ MEM_PWD                                                                                                                                                                           VARCHAR2(20)
+ MEM_EMAIL                                                                                                                                                                         VARCHAR2(20)
+ MEM_PHONE                                                                                                                                                                         VARCHAR2(20)
+ MEM_ADDR                                                                                                                                                                          VARCHAR2(20)
+ MEM_NOTICE                                                                                                                                                                        VARCHAR2(20)
+
+SQL> alter table membert01
+  2  drop column mem_notice;
+
+Table altered.
+
+SQL> desc memberT01;
+ Name                                                                                                                                                                     Null?    Type
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------- --------------------------------------------------------------------------------------------------------------------
+ MEM_NAME                                                                                                                                                                          VARCHAR2(20)
+ MEM_ID                                                                                                                                                                            VARCHAR2(20)
+ MEM_PWD                                                                                                                                                                           VARCHAR2(20)
+ MEM_EMAIL                                                                                                                                                                         VARCHAR2(20)
+ MEM_PHONE                                                                                                                                                                         VARCHAR2(20)
+ MEM_ADDR                                                                                                                                                                          VARCHAR2(20)
+
+SQL> alter table membert01
+  2  rename column mem_addr to mem_address;
+
+Table altered.
+
+SQL> select * from memberT01;
+
+MEM_NAME                                 MEM_ID                                   MEM_PWD                             MEM_EMAIL                                MEM_PHONE                                MEM_ADDRESS
+---------------------------------------- ---------------------------------------- ---------------------------------------- ---------------------------------------- ---------------------------------------- ----------------------------------------
+오렌지                                   orange                                   4321                                orange@test.com                          032                                      재능대학교
+장미                                     red                                      1234                                red@test.com                             044                                      홍익대학교
+개나리                                   yellow                                   1234                                yellow@test.com                          032                                      재능대학교
+소나무                                   green                                    1234                                green@test.com                           044                                      홍익대학교
+바다                                     blue                                     1234                                blue@test.com                            044                                      홍익대학교
+
+SQL>
+
+
